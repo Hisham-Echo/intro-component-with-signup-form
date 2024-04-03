@@ -1,0 +1,175 @@
+/** Mobile-First Workflow */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: color ease-in-out 0.2s, background-color ease-in-out 0.2s, display ease-in-out 0.2s, border-color ease-in-out 0.2s;
+  -webkit-transition: color ease-in-out 0.2s, background-color ease-in-out 0.2s, display ease-in-out 0.2s, border-color ease-in-out 0.2s;
+  -moz-transition: color ease-in-out 0.2s, background-color ease-in-out 0.2s, display ease-in-out 0.2s, border-color ease-in-out 0.2s;
+  -ms-transition: color ease-in-out 0.2s, background-color ease-in-out 0.2s, display ease-in-out 0.2s, border-color ease-in-out 0.2s;
+  -o-transition: color ease-in-out 0.2s, background-color ease-in-out 0.2s, display ease-in-out 0.2s, border-color ease-in-out 0.2s;
+}
+
+:root {
+  /** Colors **/
+  /*primary*/
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+  /*accent*/
+  --Blue: hsl(248, 32%, 49%);
+  /*neutral*/
+  --Dark-Blue: hsl(249, 10%, 26%);
+  --Grayish-Blue: hsl(246, 25%, 77%);
+  --shadow: #00000020;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  color: white;
+  background-color: var(--Red);
+  background-image: url(../images/bg-intro-mobile.png);
+  background-size: cover;
+}
+
+::-moz-placeholder {
+  font-weight: 700;
+}
+
+::placeholder {
+  font-weight: 700;
+}
+
+main {
+  max-width: 360px;
+  padding: 40px 15px;
+}
+main,
+main .txt {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+main .txt {
+  text-align: center;
+  margin-bottom: 25px;
+}
+main .txt h1 {
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+main .txt p {
+  font-weight: 500;
+}
+main .form header {
+  margin: 25px 0;
+  padding: 20px 50px;
+  text-align: center;
+  background-color: var(--Blue, blue);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 0 8px 0 0 var(--shadow);
+}
+main .form header span {
+  font-weight: 700;
+}
+main .form form {
+  color: black;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  box-shadow: 0 8px 0 0 var(--shadow);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+main .form form .input {
+  position: relative;
+}
+main .form form input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid var(--shadow);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+main .form form input[type=submit] {
+  background-color: var(--Green, green);
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: none;
+  box-shadow: 0 2px 0 2px hsl(154, 52%, 48%);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+main .form form input[type=submit]:hover {
+  cursor: pointer;
+  background-color: hsl(154, 77%, 63%);
+}
+main .form form p {
+  font-size: 0.68rem;
+  padding: 0 20px;
+  text-align: center;
+  color: var(--Grayish-Blue);
+}
+main .form form p a {
+  color: var(--Red);
+  text-decoration: none;
+  font-weight: 700;
+}
+main .form form p a:hover {
+  color: var(--Blue);
+}
+
+@media (min-width: 1000px) {
+  body {
+    background-image: url(../images/bg-intro-desktop.png);
+  }
+  main {
+    padding: 0 10%;
+    max-width: 1440px;
+    flex-flow: row nowrap;
+    gap: 50px;
+  }
+  main .txt {
+    flex: 1;
+    text-align: left;
+    align-items: stretch;
+  }
+  main .txt h1 {
+    font-size: 2.9rem;
+  }
+  main .form {
+    flex: 1;
+  }
+  main .form form {
+    padding: 40px;
+  }
+  main .form form input {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+}/*# sourceMappingURL=style.css.map */
